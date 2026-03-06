@@ -22,3 +22,10 @@
 ```bash
 git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
 cd your-repo-name
+
+### 2. 安装依赖
+pip install -r requirements.txt
+### 3. 配置环境
+cp .env.example .env
+### 4. 运行 Agent
+python main.py
