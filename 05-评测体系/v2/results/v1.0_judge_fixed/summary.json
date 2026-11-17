@@ -1,0 +1,20 @@
+{
+ "version": "v1.0_judge_fixed",
+ "rejudged_from": "v1_doubao_qwen",
+ "judge_model": "qwen-plus",
+ "judge_prompt": "fixed_corpus_aware",
+ "legal_slice": {
+  "n": 20,
+  "mos": 4.26,
+  "dim_avg": {
+   "准确性": 4.0,
+   "相关性": 4.3,
+   "完整性": 4.7,
+   "简洁性": 3.6,
+   "安全性": 4.7
+  }
+ },
+ "off_topic_slice": {
+  "n": 0
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "version": "v3_batch",
+ "single": {
+  "n": 20,
+  "legal_n": 17,
+  "intent_acc": 0.824,
+  "intent_misses": [
+   [
+    4,
+    "构成要件与归责",
+    "statute_lookup",
+    "网上买的化妆品收到货发现是假货，可以要求多少倍的赔偿？"
+   ],
+   [
+    7,
+    "构成要件与归责",
+    "statute_lookup",
+    "听说欠债超过三年就不用还了，这种说法对吗？"
+   ],
+   [
+    14,
+    "规则冲突与适用",
+    "statute_lookup",
+    "借条上只写了担保人签字没写保证方式，担保人承担的算哪种保证责"
+   ]
+  ],
+  "retrieval_hit": 1.0,
+  "retrieval_misses": [],
+  "citations_total": 39,
+  "ungrounded_total": 0,
+  "mos_legal": 4.741,
+  "mos_off_topic": 3.133,
+  "off_topic_refused": "2/3",
+  "latency_p50_ms": 39959,
+  "latency_p95_ms": 45247
+ },
+ "multi": {
+  "sessions": 10,
+  "turns": 30,
+  "intent_acc": 0.821,
+  "intent_misses": [
+   [
+    "m03",
+    2,
+    "elements_liability",
+    "other",
+    "查账被公司拒绝了怎么办？"
+   ],
+   [
+    "m06",
+    2,
+    "concept_definition",
+    "elements_liability",
+    "如果合同写的是订金呢？"
+   ],
+   [
+    "m08",
+    3,
+    "rule_conflict",
+    "elements_liability",
+    "债务人明明有钱不还，银行能直接找我要钱吗？"
+   ],
+   [
+    "m09",
+    1,
+    "elements_liability",
+    "other",
+    "公司拖欠工资怎么维权？"
+   ],
+   [
+    "m10",
+    3,
+    "elements_liability",
+    "statute_lookup",
+    "从来没签合同也没交社保，我能要多少补偿？"
+   ]
+  ],
+  "retrieval_hit": 0.964,
+  "retrieval_misses": [
+   [
+    "m07",
+    3,
+    "我离职之后还能追讨这两年的加班费吗？"
+   ]
+  ],
+  "citations_total": 69,
+  "ungrounded_total": 0,
+  "turn_marked_citations": 3,
+  "turns_using_history": 3,
+  "refuse_checks_passed": "2/2",
+  "mos_legal": 4.664,
+  "mos_turn1": 4.44,
+  "mos_followup": 4.653
+ }
+}

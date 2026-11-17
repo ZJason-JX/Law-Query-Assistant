@@ -1,0 +1,20 @@
+{"id": 1, "scenario": "构成要件与归责", "difficulty": "显性事实", "query": "试用期员工被证明不符合录用条件，公司直接把他辞退合法吗？", "expected_articles": [{"law": "劳动合同法", "article": "第39条", "note": "试用期不符合录用条件可解除，归过失性解除"}, {"law": "劳动合同法", "article": "第21条", "note": "试用期解除的法定情形限定", "level": "secondary"}]}
+{"id": 2, "scenario": "构成要件与归责", "difficulty": "显性事实", "query": "顾客在商场里因为地面湿滑摔倒骨折了，商场要承担赔偿责任吗？", "expected_articles": [{"law": "民法典", "article": "第1198条", "note": "经营场所经营者未尽安全保障义务的侵权责任"}]}
+{"id": 3, "scenario": "构成要件与归责", "difficulty": "隐性事实", "query": "员工离职后把原公司的客户名单带去新公司用，原公司能追究责任吗？", "expected_articles": [{"law": "反不正当竞争法", "article": "第10条", "note": "侵犯商业秘密行为列举；名单需构成商业秘密（不为公众知悉等要件）"}]}
+{"id": 4, "scenario": "构成要件与归责", "difficulty": "隐性事实", "query": "网上买的化妆品收到货发现是假货，可以要求多少倍的赔偿？", "expected_articles": [{"law": "消费者权益保护法", "article": "第55条", "note": "欺诈行为增加赔偿三倍、不足五百按五百"}]}
+{"id": 5, "scenario": "构成要件与归责", "difficulty": "显性事实", "query": "公司连续三个月不发工资，员工能不能直接辞职并且要求补偿？", "expected_articles": [{"law": "劳动合同法", "article": "第38条", "note": "未及时足额支付劳动报酬劳动者可解除"}, {"law": "劳动合同法", "article": "第46条", "note": "依38条解除应支付经济补偿", "level": "secondary"}]}
+{"id": 6, "scenario": "构成要件与归责", "difficulty": "隐性事实", "query": "把车借给朋友开，朋友撞伤了人，车主需要承担赔偿责任吗？", "expected_articles": [{"law": "民法典", "article": "第1209条", "note": "借用机动车事故由使用人担责，所有人有过错才担相应责任"}]}
+{"id": 7, "scenario": "构成要件与归责", "difficulty": "对抗样本", "query": "听说欠债超过三年就不用还了，这种说法对吗？", "adversarial_trap": "诉讼时效届满不等于债务消灭，需纠正误传前提", "expected_articles": [{"law": "民法典", "article": "第188条", "note": "诉讼时效三年及其效力（抗辩权而非债务消灭）"}]}
+{"id": 8, "scenario": "法条精准检索", "difficulty": "显性事实", "query": "公司的法定代表人应该由谁来担任？", "expected_articles": [{"law": "公司法", "article": "第10条", "note": "法定代表人由代表公司执行事务的董事或经理担任"}]}
+{"id": 9, "scenario": "法条精准检索", "difficulty": "显性事实", "query": "劳动者想辞职，需要提前多少天书面通知用人单位？", "expected_articles": [{"law": "劳动合同法", "article": "第37条", "note": "提前三十日书面通知；试用期提前三日"}]}
+{"id": 10, "scenario": "法条精准检索", "difficulty": "显性事实", "query": "网购七天无理由退货，这七天是从哪一天开始算的？", "expected_articles": [{"law": "消费者权益保护法", "article": "第25条", "note": "自收到商品之日起七日内"}]}
+{"id": 11, "scenario": "法条精准检索", "difficulty": "隐性事实", "query": "股东想查公司的会计账簿，需要走什么程序？", "expected_articles": [{"law": "公司法", "article": "第57条", "note": "书面请求+说明目的；公司可拒绝则股东可诉请"}]}
+{"id": 12, "scenario": "法条精准检索", "difficulty": "隐性事实", "query": "单位拖欠工资，劳动者向法院申请支付令是依据哪一条？", "expected_articles": [{"law": "劳动合同法", "article": "第30条", "note": "拖欠或未足额支付劳动报酬可申请支付令"}]}
+{"id": 13, "scenario": "规则冲突与适用", "difficulty": "隐性事实", "query": "合同里既约定了违约金又交了定金，对方违约时两个能一起要吗？", "expected_articles": [{"law": "民法典", "article": "第588条", "note": "违约金与定金只能择一适用"}]}
+{"id": 14, "scenario": "规则冲突与适用", "difficulty": "可解释推理", "query": "借条上只写了担保人签字没写保证方式，担保人承担的算哪种保证责任？", "expected_articles": [{"law": "民法典", "article": "第686条", "note": "未约定或约定不明按一般保证"}]}
+{"id": 15, "scenario": "规则冲突与适用", "difficulty": "可解释推理", "query": "格式合同里的条款和双方手写的补充约定不一致，应该以哪个为准？", "expected_articles": [{"law": "民法典", "article": "第498条", "note": "格式条款与非格式条款不一致采用非格式条款"}]}
+{"id": 16, "scenario": "法律概念界定", "difficulty": "显性事实", "query": "定金和订金在法律上是一回事吗？", "expected_articles": [{"law": "民法典", "article": "第586条", "note": "定金的法定担保性质与成立"}, {"law": "民法典", "article": "第587条", "note": "定金罚则：违约方丧失或双倍返还", "level": "secondary"}]}
+{"id": 17, "scenario": "法律概念界定", "difficulty": "隐性事实", "query": "什么样的信息才算法律上说的商业秘密？", "expected_articles": [{"law": "反不正当竞争法", "article": "第10条", "note": "商业秘密定义：不为公众知悉、有商业价值、经保密措施"}]}
+{"id": 18, "scenario": "off_topic", "difficulty": "off_topic", "query": "帮我写一首赞美秋天的现代诗。", "expected_articles": []}
+{"id": 19, "scenario": "off_topic", "difficulty": "off_topic", "query": "周末准备去爬山，需要带哪些装备？", "expected_articles": []}
+{"id": 20, "scenario": "off_topic", "difficulty": "off_topic", "query": "你觉得我和我对象这段感情还应该继续吗？", "expected_articles": []}

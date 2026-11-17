@@ -1,0 +1,55 @@
+{
+ "version": "v22_react_live",
+ "gen_provider": "doubao",
+ "legal_slice": {
+  "n": 30,
+  "mos": 4.607,
+  "dim_avg": {
+   "准确性": 4.667,
+   "相关性": 4.333,
+   "完整性": 4.333,
+   "简洁性": 4.7,
+   "安全性": 5.0
+  }
+ },
+ "off_topic_slice": {
+  "n": 3,
+  "mos": 2.2,
+  "dim_avg": {
+   "准确性": 1.0,
+   "相关性": 1.0,
+   "完整性": 1.0,
+   "简洁性": 3.0,
+   "安全性": 5.0
+  }
+ },
+ "intent": {
+  "accuracy_legal": 0.533,
+  "off_topic_refused": [
+   31,
+   32,
+   33
+  ]
+ },
+ "citation_audit": {
+  "n_citations": 61,
+  "ungrounded": 0,
+  "ungrounded_rate": 0.0,
+  "quote_bands": {
+   "verbatim": 45,
+   "paraphrase": 13,
+   "unmatched": 3,
+   "outside_context": 0,
+   "no_quote": 0
+  }
+ },
+ "react_cost": {
+  "avg_react_rounds": 1.7,
+  "avg_gen_latency_ms": 31954,
+  "stop_reasons": {
+   "no_delta": 7,
+   "max_rounds": 19,
+   "sufficient": 4
+  }
+ }
+}

@@ -1,0 +1,529 @@
+{
+ "n_citations": 67,
+ "ungrounded": 0,
+ "ungrounded_rate": 0.0,
+ "quote_bands": {
+  "verbatim": 49,
+  "paraphrase": 16,
+  "unmatched": 2,
+  "outside_context": 0,
+  "no_quote": 0
+ },
+ "detail": [
+  {
+   "id": 1,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法第2条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第96条",
+     "band": "paraphrase",
+     "qr": 0.833
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法第46条",
+     "band": "unmatched",
+     "qr": 0.448
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第40条",
+     "band": "paraphrase",
+     "qr": 0.848
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第87条",
+     "band": "verbatim",
+     "qr": 0.962
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法第4条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动法第4条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动法第42条",
+     "band": "paraphrase",
+     "qr": 0.793
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法第24条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第23条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第25条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动法72",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动法100",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法19",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动法21",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法83",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法17",
+     "band": "paraphrase",
+     "qr": 0.889
+    },
+    {
+     "cit": "中华人民共和国公司法53",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法第39条",
+     "band": "verbatim",
+     "qr": 0.906
+    },
+    {
+     "cit": "中华人民共和国民法典第501条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第23条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国民法典第1234条",
+     "band": "paraphrase",
+     "qr": 0.886
+    },
+    {
+     "cit": "中华人民共和国公司法第264条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国民法典第1229条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动法第37条",
+     "band": "verbatim",
+     "qr": 0.964
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第4条",
+     "band": "paraphrase",
+     "qr": 0.885
+    },
+    {
+     "cit": "中华人民共和国公司法第66条",
+     "band": "paraphrase",
+     "qr": 0.864
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法第35条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第95条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国消费者权益保护法第60条",
+     "band": "verbatim",
+     "qr": 0.912
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法第114条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国民法典第477条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国公司法第113条",
+     "band": "paraphrase",
+     "qr": 0.771
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法第13条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法14",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国反不正当竞争法30",
+     "band": "paraphrase",
+     "qr": 0.893
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法第21条",
+     "band": "verbatim",
+     "qr": 0.944
+    },
+    {
+     "cit": "中华人民共和国反不正当竞争法第9条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法第10条",
+     "band": "verbatim",
+     "qr": 0.956
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法15",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法121",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国民法典第571条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法218",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国公司法229",
+     "band": "paraphrase",
+     "qr": 0.871
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国民法典第327条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国民法典第243条",
+     "band": "paraphrase",
+     "qr": 0.84
+    },
+    {
+     "cit": "中华人民共和国民法典第245条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "n": 2,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法20",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国反不正当竞争法19",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国消费者权益保护法23",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国反不正当竞争法10",
+     "band": "paraphrase",
+     "qr": 0.675
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "n": 1,
+   "citations": [
+    {
+     "cit": "中华人民共和国民法典第861条",
+     "band": "paraphrase",
+     "qr": 0.833
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法第189条",
+     "band": "unmatched",
+     "qr": 0.467
+    },
+    {
+     "cit": "中华人民共和国公司法第22条",
+     "band": "paraphrase",
+     "qr": 0.862
+    },
+    {
+     "cit": "中华人民共和国公司法第190条",
+     "band": "verbatim",
+     "qr": 0.909
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国民法典第573条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国民法典第571条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国民法典第574条",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动法第21条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第19条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第20条",
+     "band": "paraphrase",
+     "qr": 0.895
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国劳动合同法第21条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第37条",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国劳动合同法第39条",
+     "band": "paraphrase",
+     "qr": 0.871
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "n": 3,
+   "citations": [
+    {
+     "cit": "中华人民共和国公司法49",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国公司法54",
+     "band": "verbatim",
+     "qr": 1.0
+    },
+    {
+     "cit": "中华人民共和国公司法252",
+     "band": "verbatim",
+     "qr": 1.0
+    }
+   ]
+  }
+ ]
+}
