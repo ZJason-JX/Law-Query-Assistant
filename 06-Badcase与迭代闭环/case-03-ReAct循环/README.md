@@ -25,7 +25,7 @@
 
 ## 6. 采纳或否决
 
-采纳，升级为 S0–S5 状态机（意图路由 → 首轮检索 → 充分性门控 → 追加轮 ≤2 → 生成 → 引用校验）。每轮检索了什么见 [`query_expansion_trace.jsonl`](query_expansion_trace.jsonl)，e2e 跑批见 [`v22_react_live/`](v22_react_live/)（同步副本在 [`05-评测体系/v2/results/v22_react_live`](../../05-评测体系/v2/results/v22_react_live/)）。
+采纳，升级为 S0–S5 状态机（意图路由 → 首轮检索 → 充分性门控 → 追加轮 ≤2 → 生成 → 引用校验）。每轮检索了什么见 [`query_expansion_trace.jsonl`](query_expansion_trace.jsonl)，e2e 跑批见 [`05-评测体系/v2/results/v22_react_live`](../../05-评测体系/v2/results/v22_react_live/)。
 
 ## 7. 改动了哪个阶段的哪个文件
 

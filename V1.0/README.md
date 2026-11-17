@@ -49,6 +49,8 @@
 | `README_v1.0_original.md` | **原仓库根 README 的保真副本**（原文件名 `README.md`，为避免与本目录说明冲突而重命名）。含 1.0 完整叙事与当时的 v2.0 升级路线设想 |
 
 > 原 README 里的「v2.0 升级路线（JEV / 结构化向量库 / 自动化评测流水线）」是 2026.03 时的**规划设想**，其中 JEV 落地形态、知识库规模、评测流水线与最终实现有出入。以仓库根 [`README.md`](../README.md) 与 `V2.0/` 为当前事实来源。
+>
+> 原 README 中 `docs/agentic-rag-workflow.png` 为历史断链，对应架构图实为 `Agent/Agentic_rag_law .png`。
 
 ### 3.2 `Agent/` — Agentic RAG 工作流
 

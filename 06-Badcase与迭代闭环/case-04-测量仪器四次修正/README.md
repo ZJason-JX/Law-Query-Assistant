@@ -25,7 +25,7 @@
 
 - 融合实现改回 RRF 求和，v0.3 记为「实现偏离规格」，v0.6-RRF 为合规实现；
 - judge 注入语料清单后，2025 版反法相关冤判清除，回溯重判完成；
-- judge 校准：±1 一致率 86.7%、Pearson 0.893（数据见 [`judge_calibration/`](judge_calibration/)，同步副本在 [`05-评测体系/v2/results/judge_calibration`](../../05-评测体系/v2/results/judge_calibration/)）；
+- judge 校准：±1 一致率 86.7%、Pearson 0.893（数据见 [`05-评测体系/v2/results/judge_calibration`](../../05-评测体系/v2/results/judge_calibration/)）；
 - 门控位置图纠正 + 「state 只给条号」列入 v3 存货。
 
 ## 6. 采纳或否决

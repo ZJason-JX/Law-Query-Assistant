@@ -32,7 +32,7 @@
 | `v2/FREEZE.md` | 检索九版消融冻结决议 |
 | `v2/GENERATION_FREEZE_v1.2.md` | 生成三版迭代冻结决议 |
 | `v2/judge_prompt.md` | LLM-as-judge 评分 prompt（五维 + rationale） |
-| `v2/dataset*.jsonl` | 评测集与标注：v1（23 题）/ v2（33 题）/ v3 单轮 20 + 多轮 10 会话 |
+| `v2/dataset*.jsonl` | 评测集与标注：v1（23 题）/ v2（33 题）/ v3 单轮集 20 题 / v3 多轮集 10 会话（每会话 3 轮，展开 30 个 query，`v3_batch/multi_runs` 实跑 30 行） |
 | `v2/citation_audit/` | 引用审计六版结果（`ungrounded_rates.json` 等 3 文件） |
 | `v2/results/` | 冻结版本跑批：`v1.0_judge_fixed` `v1.1_judge_fixed` `v1.2_r1` `v1.2_r2`（生成三版）、`v22_react_live`（ReAct e2e）、`v30_e2e_v3intent`（意图 0.800 + 混淆矩阵/confidence 直方图）、`v3_batch`（单轮20+多轮30 全量）、`judge_calibration`（校准数据） |
 | `v2/v23_react_variance.md` | ReAct 门控非确定性方差记录 |

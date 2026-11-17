@@ -29,7 +29,7 @@
 
 ## 6. 采纳或否决
 
-采纳 v1.2，冻结于 [`05-评测体系/v2/GENERATION_FREEZE_v1.2.md`](../../05-评测体系/v2/GENERATION_FREEZE_v1.2.md)（本目录副本见 [`GENERATION_FREEZE_v1.2.md`](GENERATION_FREEZE_v1.2.md)）；三版跑批分数见 [`05-评测体系/v2/results/v1.0_judge_fixed`](../../05-评测体系/v2/results/v1.0_judge_fixed/)、[`v1.1_judge_fixed`](../../05-评测体系/v2/results/v1.1_judge_fixed/)、[`v1.2_r1`](../../05-评测体系/v2/results/v1.2_r1/)、[`v1.2_r2`](../../05-评测体系/v2/results/v1.2_r2/)。
+采纳 v1.2，冻结决议见 [`05-评测体系/v2/GENERATION_FREEZE_v1.2.md`](../../05-评测体系/v2/GENERATION_FREEZE_v1.2.md)；三版跑批分数见 [`05-评测体系/v2/results/v1.0_judge_fixed`](../../05-评测体系/v2/results/v1.0_judge_fixed/)、[`v1.1_judge_fixed`](../../05-评测体系/v2/results/v1.1_judge_fixed/)、[`v1.2_r1`](../../05-评测体系/v2/results/v1.2_r1/)、[`v1.2_r2`](../../05-评测体系/v2/results/v1.2_r2/)。
 
 ## 7. 改动了哪个阶段的哪个文件
 
