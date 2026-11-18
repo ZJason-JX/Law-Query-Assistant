@@ -11,6 +11,11 @@
 
 </div>
 
+<p align="center">
+  <img src="docs/screens/chat.png" width="49%" alt="对话页 — S0–S5 链路观测" />
+  <img src="docs/screens/admin.png" width="49%" alt="管理后台 — 知识库管理" />
+</p>
+
 ---
 
 ## 快速开始（从零到跑起来，Windows / Mac 通用）
