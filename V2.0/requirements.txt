@@ -1,10 +1,12 @@
-fastapi>=0.110
-uvicorn[standard]>=0.29
-pydantic>=2
-qdrant-client>=1.9
-FlagEmbedding>=1.2.10
-streamlit>=1.33
-python-docx>=1.1
-pypdf>=4
-jieba>=0.42
-numpy>=1.26
+# 实测环境：Python 3.14.2 / Windows；Python ≥3.10 均可（代码用到 dict|None 语法）
+# torch / transformers / sentence-transformers 由 FlagEmbedding 自动带入（平台相关，不锁版本）
+fastapi==0.163.1
+uvicorn[standard]==0.54.0
+pydantic==2.13.5
+qdrant-client==1.19.1
+FlagEmbedding==1.4.2
+streamlit==1.65.0
+python-docx==1.2.0
+pypdf==6.19.0
+jieba==0.42.1
+numpy==2.5.3

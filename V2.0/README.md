@@ -12,6 +12,8 @@
 
 ### 第 0 步 · 装环境（每台电脑只装一次）
 
+**版本要求**：Python **≥3.10**（代码用到 `dict | None` 语法；实测环境 Python 3.14.2 / Windows，`requirements.txt` 已锁到实测版本）；Git（可省，用 ZIP）；Node **≥18** 仅改前端时需要（实测 v24.13）。
+
 ```bash
 # Windows：python.org 下载 Python 3.10+，安装时勾选 Add to PATH
 #          git-scm.com 装 Git（用 Download ZIP 拿代码可以不装）
