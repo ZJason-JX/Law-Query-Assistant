@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-10-04",
+  "freeze_version": "v1.0-retrieval",
+  "corpus": {
+    "chunks": "src/corpus/chunks/chunks.jsonl",
+    "aliases": "src/corpus/chunks/aliases.jsonl",
+    "stats": "民法典1260 / 公司法266 / 反不正当竞争法2025版41 / 反不正当竞争法2019历史版33 / 消费者权益保护法63 / 劳动合同法98 / 劳动法107 = 1868 条（2026-10-05 扩充两法）",
+ "changelog": [
+  {
+   "date": "2026-10-05",
+   "change": "新增劳动合同法(2012修正,98条)与劳动法(2018修正,107条)，1663→1868",
+   "reason": "用户决策：调研劳动用工场景覆盖",
+   "gate_result": "见 evals/results/corpus_v2_labour_law/recall_report.json"
+  }
+ ],
+    "embedding_text": "rich+aliases：《法名》条号 + 编/章全称·标题 + 正文 + 关键词(≤2) + 法理概念(≤3)"
+  },
+  "embedder": {
+    "model": "BAAI/bge-m3",
+    "dense_dim": 1024,
+    "sparse": true,
+    "vectors_file": "src/corpus/chunks/vectors_bgem3_v0_5.npz"
+  },
+  "vector_store": {
+    "engine": "qdrant local (qdrant-client path=)",
+    "storage": "src/db/qdrant_storage",
+    "collection": "law_articles_v0_5"
+  },
+  "retrieval": {
+    "query_expansion": {
+      "enabled": true,
+      "llm": "deepseek-chat (temperature=0.3)",
+      "variants_per_query": 3,
+      "prompt_red_line": "改写 prompt 仅含用户 query，永不接触 expected_articles"
+    },
+    "lanes": ["dense", "sparse"],
+    "lane_fetch": 20,
+    "fusion": "RRF k=60 求和（跨 query×lane 八路）",
+    "reranker": false,
+    "topk": 10
+  },
+  "gates_frozen_baseline": {
+    "显性事实": {"threshold": 0.90, "actual": 1.00, "pass": true},
+    "隐性事实": {"threshold": 0.70, "actual": 0.60, "pass": false, "note": "已知上限，见缺陷清单"},
+    "对抗样本_veto": {"actual": 1.00, "pass": true},
+    "显性回归": {"actual": "无", "pass": true},
+    "overall": "FAIL-by-gate / 冻结例外放行（缺陷已三分类归档）"
+  },
+  "known_missed": [
+    {"eval_id": 14, "article": "civil-law-465", "defect_class": "能力缺口/词面真空"},
+    {"eval_id": 16, "article": "anti-unfair-competition-law-2", "defect_class": "融合稀释（火种 sparse#3 存在）"}
+  ],
+  "rejected_directions": ["reranker 精排（v0.2/v0.4 两次阴性回归）", "稀疏路加权（用户拒绝）", "best-rank 融合（实现偏离，规格为 RRF 求和）"]
+}

@@ -1,0 +1,40 @@
+{"session": "m01", "theme": "劳动合同·未签约", "turns": [
+  {"query": "公司超过一个月没跟我签劳动合同，能要双倍工资吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动合同法", "article": "第82条"}], "check": "首问"},
+  {"query": "那超过一年没签呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动合同法", "article": "第14条"}], "check": "指代沿用"},
+  {"query": "换成个体户雇人算不算？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动合同法", "article": "第2条"}], "check": "主体变体"}]}
+{"session": "m02", "theme": "侵权·动物致害", "turns": [
+  {"query": "在小区被邻居家的狗咬伤了，医药费该谁出？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第1245条"}], "check": "首问"},
+  {"query": "如果是我先拿石头砸它才被咬的呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第1245条"}], "check": "条件变体+沿用"},
+  {"query": "那要是没人养的流浪狗咬的，找谁赔？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第1249条"}], "check": "主体变体"}]}
+{"session": "m03", "theme": "公司法·股东权", "turns": [
+  {"query": "我是公司小股东，能查公司的会计账簿吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "公司法", "article": "第57条"}], "check": "首问"},
+  {"query": "查账被公司拒绝了怎么办？", "expected_intent": "elements_liability", "expected_articles": [{"law": "公司法", "article": "第57条"}], "check": "指代沿用"},
+  {"query": "那我把股份卖给外人需要其他股东同意吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "公司法", "article": "第84条"}], "check": "同域新问"}]}
+{"session": "m04", "theme": "消法·网购退货", "turns": [
+  {"query": "网上买的衣服收到后不喜欢，能七天无理由退货吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "消费者权益保护法", "article": "第25条"}], "check": "首问"},
+  {"query": "如果是定做的窗帘呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "消费者权益保护法", "article": "第25条"}], "check": "条件变体+沿用"},
+  {"query": "那如果我收到的衣服是假货，能要什么赔偿？", "expected_intent": "elements_liability", "expected_articles": [{"law": "消费者权益保护法", "article": "第55条"}], "check": "同域升级"}]}
+{"session": "m05", "theme": "反法·商业秘密", "turns": [
+  {"query": "员工把公司的客户名单拷走去竞争对手公司用，这违法吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "反不正当竞争法", "article": "第10条"}], "check": "首问"},
+  {"query": "如果那些客户信息在网上本来就查得到呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "反不正当竞争法", "article": "第10条"}], "check": "要件变体"},
+  {"query": "公司想起诉他侵犯商业秘密，能主张什么责任？", "expected_intent": "elements_liability", "expected_articles": [{"law": "反不正当竞争法", "article": "第10条"}], "check": "救济追问"}]}
+{"session": "m06", "theme": "民法典·定金", "turns": [
+  {"query": "买房交了五万定金，现在不想买了能退吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第587条"}], "check": "首问"},
+  {"query": "如果合同写的是订金呢？", "expected_intent": "concept_definition", "expected_articles": [{"law": "民法典", "article": "第586条"}], "check": "概念变体"},
+  {"query": "那如果是卖方违约不卖了，我能要回来多少？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第587条"}], "check": "反向条件"}]}
+{"session": "m07", "theme": "劳动·加班费", "turns": [
+  {"query": "公司安排加班但不给加班费，合法吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动法", "article": "第44条"}], "check": "首问"},
+  {"query": "如果公司让我签了自愿加班不要加班费的声明呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动法", "article": "第44条"}], "check": "对抗变体"},
+  {"query": "我离职之后还能追讨这两年的加班费吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动法", "article": "第77条"}], "check": "时效/救济追问"}]}
+{"session": "m08", "theme": "民法典·保证", "turns": [
+  {"query": "我给朋友借钱做担保只签了保证人三个字，要承担什么责任？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第686条"}], "check": "首问"},
+  {"query": "如果合同里写的是连带责任保证呢？", "expected_intent": "elements_liability", "expected_articles": [{"law": "民法典", "article": "第688条"}], "check": "条件变体"},
+  {"query": "债务人明明有钱不还，银行能直接找我要钱吗？", "expected_intent": "rule_conflict", "expected_articles": [{"law": "民法典", "article": "第687条"}], "check": "顺位追问"}]}
+{"session": "m09", "theme": "历史不兜底·法律转闲聊", "turns": [
+  {"query": "公司拖欠工资怎么维权？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动合同法", "article": "第30条"}], "check": "首问"},
+  {"query": "那申请支付令需要什么条件？", "expected_intent": "statute_lookup", "expected_articles": [{"law": "劳动合同法", "article": "第30条"}], "check": "指代沿用"},
+  {"query": "对了，明天天气怎么样？", "expected_intent": "irrelevant", "expected_articles": [], "check": "历史不构成法律依据·应拒答"}]}
+{"session": "m10", "theme": "拒答轮不算数·闲聊转法律", "turns": [
+  {"query": "推荐一部好看的电影吧。", "expected_intent": "irrelevant", "expected_articles": [], "check": "首问应拒答"},
+  {"query": "那你帮我看看，公司不交社保违法吗？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动法", "article": "第72条"}], "check": "拒答轮后正常作答"},
+  {"query": "从来没签合同也没交社保，我能要多少补偿？", "expected_intent": "elements_liability", "expected_articles": [{"law": "劳动合同法", "article": "第46条"}], "check": "复合追问"}]}

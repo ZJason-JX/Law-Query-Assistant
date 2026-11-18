@@ -1,0 +1,192 @@
+{
+ "query": "员工不辞而别就算自动离职、无需任何手续，那公司在试用期直接让他走并说明理由总没问题吧？",
+ "trap_article": "labor-contract-law-21",
+ "first_round_articles": [
+  {
+   "id": "labor-contract-law-39",
+   "law": "劳动合同法",
+   "article_no": "第39条",
+   "rrf": 0.1229,
+   "dense_rank": 1,
+   "sparse_rank": 1
+  },
+  {
+   "id": "labor-law-25",
+   "law": "劳动法",
+   "article_no": "第25条",
+   "rrf": 0.1204,
+   "dense_rank": 3,
+   "sparse_rank": 2
+  },
+  {
+   "id": "labor-contract-law-38",
+   "law": "劳动合同法",
+   "article_no": "第38条",
+   "rrf": 0.1046,
+   "dense_rank": 1,
+   "sparse_rank": 4
+  },
+  {
+   "id": "labor-contract-law-42",
+   "law": "劳动合同法",
+   "article_no": "第42条",
+   "rrf": 0.0858,
+   "dense_rank": 2,
+   "sparse_rank": 1
+  },
+  {
+   "id": "labor-contract-law-37",
+   "law": "劳动合同法",
+   "article_no": "第37条",
+   "rrf": 0.0852,
+   "dense_rank": 4,
+   "sparse_rank": 3
+  },
+  {
+   "id": "labor-law-26",
+   "law": "劳动法",
+   "article_no": "第26条",
+   "rrf": 0.0829,
+   "dense_rank": 9,
+   "sparse_rank": 9
+  },
+  {
+   "id": "labor-law-32",
+   "law": "劳动法",
+   "article_no": "第32条",
+   "rrf": 0.075,
+   "dense_rank": 2,
+   "sparse_rank": 4
+  },
+  {
+   "id": "labor-contract-law-46",
+   "law": "劳动合同法",
+   "article_no": "第46条",
+   "rrf": 0.0726,
+   "dense_rank": 2,
+   "sparse_rank": 4
+  },
+  {
+   "id": "labor-contract-law-44",
+   "law": "劳动合同法",
+   "article_no": "第44条",
+   "rrf": 0.0694,
+   "dense_rank": 6,
+   "sparse_rank": 13
+  },
+  {
+   "id": "labor-contract-law-43",
+   "law": "劳动合同法",
+   "article_no": "第43条",
+   "rrf": 0.0683,
+   "dense_rank": 8,
+   "sparse_rank": 11
+  }
+ ],
+ "gates": [
+  {
+   "sufficient": 0.31,
+   "false_premise": 0.94
+  },
+  {
+   "sufficient": 0.34,
+   "false_premise": null
+  },
+  {
+   "sufficient": 0.37,
+   "false_premise": null
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "new_query": "试用期解除劳动合同 不符合录用条件 举证责任 违法解除赔偿金 继续履行",
+   "recalled_delta": 6,
+   "sufficient_score": 0.31,
+   "fp_score": 0.94
+  },
+  {
+   "round": 2,
+   "new_query": "试用期解除劳动合同 不符合录用条件 举证责任 违法解除赔偿金 与自动离职的区别",
+   "recalled_delta": 1,
+   "sufficient_score": 0.34,
+   "fp_score": 0.0
+  }
+ ],
+ "stop_reason": "max_rounds",
+ "final_articles": [
+  {
+   "id": "labor-contract-law-39",
+   "law": "劳动合同法",
+   "article_no": "第39条"
+  },
+  {
+   "id": "labor-law-25",
+   "law": "劳动法",
+   "article_no": "第25条"
+  },
+  {
+   "id": "labor-law-32",
+   "law": "劳动法",
+   "article_no": "第32条"
+  },
+  {
+   "id": "labor-contract-law-37",
+   "law": "劳动合同法",
+   "article_no": "第37条"
+  },
+  {
+   "id": "labor-contract-law-21",
+   "law": "劳动合同法",
+   "article_no": "第21条"
+  },
+  {
+   "id": "labor-contract-law-83",
+   "law": "劳动合同法",
+   "article_no": "第83条"
+  },
+  {
+   "id": "labor-contract-law-87",
+   "law": "劳动合同法",
+   "article_no": "第87条"
+  },
+  {
+   "id": "labor-contract-law-38",
+   "law": "劳动合同法",
+   "article_no": "第38条"
+  },
+  {
+   "id": "labor-law-98",
+   "law": "劳动法",
+   "article_no": "第98条"
+  },
+  {
+   "id": "labor-contract-law-48",
+   "law": "劳动合同法",
+   "article_no": "第48条"
+  }
+ ],
+ "answer": "### 前提说明\n你所述“员工不辞而别视为自动离职无需手续”“试用期公司仅说明理由即可直接辞退”两个前提均无法律依据，依法不成立。\n一、【法律依据】《中华人民共和国劳动合同法》第21条规定，试用期中除法定情形外用人单位不得解除劳动合同，解除的应当向劳动者说明理由。《中华人民共和国劳动合同法》第37条规定劳动者试用期内解除劳动合同需提前3日通知。《中华人民共和国劳动合同法》第39条明确用人单位试用期合法解除的具体情形。\n二、【法理释明】我国无“自动离职”的法定概念，劳动者不辞而别不产生劳动关系自动解除的效力，用人单位仍需履行法定解除程序。试用期用人单位辞退劳动者，需同时符合法定解除情形、履行说明理由义务，仅说明理由不构成合法解除。\n三、【实务指引】遇员工不辞而别，用人单位应先发送返岗催告，拒不返岗的按规章制度作出解除决定并送达劳动者。试用期辞退员工，需留存劳动者不符合录用条件等法定情形的证据，出具正式解除文书。\n\n[{\"law\":\"中华人民共和国劳动合同法\",\"article_no\":\"21\",\"quote\":\"在试用期中，除法定情形外用人单位不得解除劳动合同，解除的应当说明理由\"},{\"law\":\"中华人民共和国劳动合同法\",\"article_no\":\"37\",\"quote\":\"劳动者在试用期内提前三日通知用人单位，可以解除劳动合同\"},{\"law\":\"中华人民共和国劳动合同法\",\"article_no\":\"39\",\"quote\":\"劳动者在试用期间被证明不符合录用条件的，用人单位可解除劳动合同\"}]",
+ "intent": "elements_liability",
+ "confidence": 0.64,
+ "false_premise": 0.91,
+ "judge": {
+  "id": 29,
+  "dimensions": {
+   "准确性": 5,
+   "相关性": 5,
+   "完整性": 5,
+   "简洁性": 5,
+   "安全性": 5
+  },
+  "mos": 5.0,
+  "reason": "准确引用第21条（明确试用期解除的法定限制与说明理由义务）、第39条（核心解除事由），虽未显式引第40条第一、二项，但第21条中“第四十条第一项、第二项”已在检索上下文中完整呈现且被答案隐含覆盖，符合锚点‘主法条对且款项全对’；全面回应双重错误前提，纠正‘自动离职’与‘试用期仅说明理由即可辞退’，并结构化覆盖法律依据、法理纠偏、实务操作，相关性5；三段式齐全，且主动提示返岗催告、证据留存、文书送达等关键动作，完整性5；首句亮明前提错误，各段精炼无冗余，首句即点破要害，简洁性5；严格依据检索上下文法条作答，明确否定非法概念，无任何越界建议，安全性5。"
+ },
+ "subtitles": [
+  "这是一个幻觉诱饵：『自动离职』在现行法里并不存在，试用期解除也必须满足法定情形。",
+  "首轮检索召回了第39条等试用期条文，但 trap 主条《劳动合同法》第21条并不在 top-10。",
+  "JEV 门控打出很高的 false_premise 分：问题前提不成立，触发纠错重查，而不是直接作答。",
+  "追加轮围绕『试用期解除的法定条件』补检，把第21条拉回证据池。",
+  "最终回答先纠正前提再引用法条，引用全部落在检索上下文内，judge 给出满分。"
+ ]
+}
