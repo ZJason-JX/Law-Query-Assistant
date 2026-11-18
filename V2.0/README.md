@@ -6,33 +6,72 @@
 
 ---
 
-## 1. 启用步骤（新电脑，约 5 分钟 + 首次模型下载）
+## 1. 启用步骤（从零开始，约 10 分钟 + 首次模型下载）
+
+> 目标读者：一台只有浏览器的电脑。每步一行命令 + 一句说明。
+
+### 第 0 步 · 装环境（每台电脑只装一次）
 
 ```bash
-cd V2.0
+# Windows：python.org 下载 Python 3.10+，安装时勾选 Add to PATH
+#          git-scm.com 装 Git（用 Download ZIP 拿代码可以不装）
 
-# 1) 装依赖（建议虚拟环境；Python 3.10+）
-python -m venv .venv
-.venv\Scripts\activate          # Windows；Mac/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-
-# 2) 配密钥：二选一
-#    a. 命令行：复制 .env.example 为 .env，填入 4 个 key
-#    b. 图形界面：直接启动，进「管理后台 → 设置 → API 密钥」粘贴（推荐，见第 2 节）
-
-# 3) 起后端（前端静态页由后端托管）
-python -m uvicorn server.main:app --port 8000
-
-# 4) 打开浏览器
-#    http://localhost:8000            → 对话页（勾选「演示模式」可不看 key 先跑通五幕演示）
-#    http://localhost:8000 → 管理后台  → 设置/评测/知识库/坏例/链路架构 五个页签
+# Mac：终端跑这一行，git 与编译工具一次装好；Python3 系统自带
+xcode-select --install
 ```
 
-前端改代码才需要另起 dev server：`cd web && npm install && npm run dev`（端口 5173，代理到 8000）。
+### 第 1 步 · 进入 V2.0 目录
 
-> 端口被占（Errno 10048）：`Get-Process python -ErrorAction SilentlyContinue | Stop-Process -Force` 清掉残留进程后重启。
+```bash
+cd Law-Query-Assistant/V2.0     # git 克隆的路径；ZIP 解压则 cd 到解压出的 V2.0 文件夹
+```
 
-**首次真实提问**会自动下载 BGE-M3 向量模型（约 2 GB，代码已配 hf-mirror 镜像）；之后的提问直接走本地。
+### 第 2 步 · 建虚拟环境（隔离依赖，必做）
+
+```bash
+# 创建虚拟环境文件夹 .venv
+python -m venv .venv          # Mac 用 python3 -m venv .venv
+
+# 激活（每次新开终端都要激活一次）
+.venv\Scripts\activate        # Windows
+source .venv/bin/activate     # Mac / Linux
+# 成功标志：提示符最前面出现 (.venv)
+```
+
+### 第 3 步 · 装依赖
+
+```bash
+# 一次性装好全部库（FastAPI / Qdrant / 向量模型库等，约 3 GB 含 torch）
+pip install -r requirements.txt
+```
+
+### 第 4 步 · 配密钥（可跳过——演示模式不需要）
+
+```bash
+# 方式 a（推荐）：先启动，进管理后台 → 设置 → API 密钥 粘贴（见第 2 节）
+# 方式 b：复制模板手填
+copy .env.example .env        # Windows；Mac 用 cp .env.example .env
+```
+
+### 第 5 步 · 启动
+
+```bash
+# 起服务：API + 前端页面都在这一个端口（web/dist 已由后端托管，无需 Node）
+python -m uvicorn server.main:app --port 8000
+
+# 浏览器打开 http://localhost:8000   → 对话页（勾选「演示模式」先看五幕重放）
+#                  /admin          → 管理后台（设置/评测/知识库/坏例/链路架构）
+```
+
+### 排错
+
+| 症状 | 处理 |
+|---|---|
+| `Errno 10048` 端口被占 | Windows `Get-Process python \| Stop-Process -Force`；Mac `kill $(lsof -ti:8000)` |
+| 首次真实提问很慢 | 正常：自动下载 BGE-M3 向量模型约 2 GB（已配 hf-mirror 国内镜像），只下一次 |
+| `externally-managed-environment` | Mac 提示：说明没激活 venv，回到第 2 步 |
+| 想改前端代码 | `cd web && npm install && npm run dev`（5173 代理 8000，需自行装 Node） |
+
 向量索引 `src/db/qdrant_storage/`（约 22 MB）与语料 `src/corpus/`（13 MB，1868 个法条切片）已在仓库内，无需重建。
 
 ---

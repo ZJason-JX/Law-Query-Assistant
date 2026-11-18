@@ -13,24 +13,75 @@
 
 ---
 
-## 快速开始（从 0 到跑起来）
+## 快速开始（从零到跑起来，Windows / Mac 通用）
+
+> 目标读者：一台只有浏览器的电脑。每步一行命令 + 一句说明。
+
+### 第 0 步 · 装环境（每台电脑只装一次）
 
 ```bash
-cd V2.0
-python -m venv .venv
-.venv\Scripts\activate          # Mac/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-python -m uvicorn server.main:app --port 8000
+# Windows：python.org 下载 Python 3.10+，安装时勾选 Add to PATH
+#          git-scm.com 装 Git（用 Download ZIP 拿代码可以不装）
+
+# Mac：终端跑这一行，git 与编译工具一次装好；Python3 系统自带
+xcode-select --install
 ```
 
-浏览器打开 **http://localhost:8000** → 对话页；管理后台在 `/admin`（设置 / 评测 / 知识库 / 坏例 / 链路架构五个页签）。
+### 第 1 步 · 拿到代码（二选一）
 
-- **不配 key 也能跑**：对话页勾选「演示模式」，看五幕链路演示（预录剧本，不调模型）
-- **真实问答需 4 个 key**：管理后台 → 设置 →「API 密钥」密码框粘贴 → 保存即生效（写本机 `.env`，只回显末 4 位）；或 `copy .env.example .env` 手填后重启
-- **首次真实提问**自动下载 BGE-M3 向量模型（约 2 GB，代码已配 hf-mirror 国内镜像）；向量索引与 1868 条语料已随库带入，无需重建
-- **要求**：Python 3.10+；改前端才需要 Node（`cd web && npm install && npm run dev`，5173 代理 8000）
+```bash
+# 方式 A：git 克隆后进入 V2.0 目录
+git clone https://github.com/ZJason-JX/Law-Query-Assistant.git
+cd Law-Query-Assistant/V2.0
 
-> 完整启用细节、密钥对照表、跑评测命令见 [`V2.0/README.md`](V2.0/README.md)。
+# 方式 B：GitHub 页面 Code → Download ZIP，解压后 cd 进 V2.0 文件夹
+```
+
+### 第 2 步 · 建虚拟环境（隔离依赖，必做）
+
+```bash
+# 创建虚拟环境文件夹 .venv
+python -m venv .venv          # Mac 用 python3 -m venv .venv
+
+# 激活（每次新开终端都要激活一次）
+.venv\Scripts\activate        # Windows
+source .venv/bin/activate     # Mac / Linux
+# 成功标志：提示符最前面出现 (.venv)
+```
+
+### 第 3 步 · 装依赖
+
+```bash
+# 一次性装好全部库（FastAPI / Qdrant / 向量模型库等，约 3 GB 含 torch）
+pip install -r requirements.txt
+```
+
+### 第 4 步 · 启动
+
+```bash
+# 起服务：API + 前端页面都在这一个端口
+python -m uvicorn server.main:app --port 8000
+
+# 浏览器打开 http://localhost:8000   → 对话页
+#                  /admin          → 管理后台（设置/评测/知识库/坏例/链路架构）
+```
+
+**不配 key 也能跑**：对话页勾选「演示模式」看五幕链路演示（预录剧本，不调模型）。
+
+### 第 5 步 · 配密钥（真实问答才需要）
+
+管理后台 → 设置 →「API 密钥」密码框粘贴 → 保存即生效（写本机 `.env`，只回显末 4 位）；
+或 `copy .env.example .env`（Mac 用 `cp`）手填后重启。
+
+### 排错
+
+| 症状 | 处理 |
+|---|---|
+| `Errno 10048` 端口被占 | Windows `Get-Process python \| Stop-Process -Force`；Mac `kill $(lsof -ti:8000)` |
+| 首次真实提问很慢 | 正常：自动下载 BGE-M3 向量模型约 2 GB（已配国内镜像），只下一次 |
+| `externally-managed-environment` | Mac 提示：说明没激活 venv，回到第 2 步 |
+
+> 向量索引与 1868 条语料已随库带入，无需重建；改前端才需要 Node。完整细节见 [`V2.0/README.md`](V2.0/README.md)。
 
 ---
 
