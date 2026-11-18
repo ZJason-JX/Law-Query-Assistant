@@ -30,6 +30,8 @@ python -m uvicorn server.main:app --port 8000
 
 前端改代码才需要另起 dev server：`cd web && npm install && npm run dev`（端口 5173，代理到 8000）。
 
+> 端口被占（Errno 10048）：`Get-Process python -ErrorAction SilentlyContinue | Stop-Process -Force` 清掉残留进程后重启。
+
 **首次真实提问**会自动下载 BGE-M3 向量模型（约 2 GB，代码已配 hf-mirror 镜像）；之后的提问直接走本地。
 向量索引 `src/db/qdrant_storage/`（约 22 MB）与语料 `src/corpus/`（13 MB，1868 个法条切片）已在仓库内，无需重建。
 
