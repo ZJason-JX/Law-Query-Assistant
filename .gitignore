@@ -13,3 +13,4 @@ V2.0/server/data/
 !V2.0/src/db/law_articles.db
 !V2.0/web/dist
 !V2.0/web/dist/**
+V2.0/src/db/qdrant_storage/.lock
