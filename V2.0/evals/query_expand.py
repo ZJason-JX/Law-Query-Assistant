@@ -37,9 +37,10 @@ HIST_RULE_E = (
 
 
 def load_key() -> str:
-    for line in open(ENV_FILE, encoding="utf-8"):
-        if line.strip().startswith("DEEPSEEK_API_KEY="):
-            return line.strip().split("=", 1)[1]
+    if ENV_FILE.exists():
+        for line in open(ENV_FILE, encoding="utf-8"):
+            if line.strip().startswith("DEEPSEEK_API_KEY="):
+                return line.strip().split("=", 1)[1]
     return os.environ["DEEPSEEK_API_KEY"]
 
 

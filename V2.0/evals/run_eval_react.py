@@ -19,10 +19,15 @@ PROJ = BASE.parent                              # 法律问答助手2.0/
 sys.path.insert(0, str(PROJ / "src"))
 sys.path.insert(0, str(BASE))
 
-for line in open(PROJ / ".env", encoding="utf-8"):
-    if "=" in line and not line.startswith("#"):
-        k, v = line.strip().split("=", 1)
-        os.environ.setdefault(k, v)
+_env = PROJ / ".env"
+if not _env.exists() and (PROJ / ".env.example").exists():
+    import shutil
+    shutil.copyfile(PROJ / ".env.example", _env)
+if _env.exists():
+    for line in open(_env, encoding="utf-8"):
+        if "=" in line and not line.startswith("#"):
+            k, v = line.strip().split("=", 1)
+            os.environ.setdefault(k, v)
 
 from run_eval import DIMENSIONS, judge  # noqa: E402
 from verify_citations import extract_citations, norm_art, norm_law, quote_ratio  # noqa: E402

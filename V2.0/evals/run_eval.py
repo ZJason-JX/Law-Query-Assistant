@@ -20,10 +20,15 @@ PROJ = BASE.parent                              # 法律问答助手2.0/
 sys.path.insert(0, str(PROJ / "src"))
 
 # ---- .env ----
-for line in open(PROJ / ".env", encoding="utf-8"):
-    if "=" in line and not line.startswith("#"):
-        k, v = line.strip().split("=", 1)
-        os.environ.setdefault(k, v)
+_env = PROJ / ".env"
+if not _env.exists() and (PROJ / ".env.example").exists():
+    import shutil
+    shutil.copyfile(PROJ / ".env.example", _env)
+if _env.exists():
+    for line in open(_env, encoding="utf-8"):
+        if "=" in line and not line.startswith("#"):
+            k, v = line.strip().split("=", 1)
+            os.environ.setdefault(k, v)
 
 DIMENSIONS = ["准确性", "相关性", "完整性", "简洁性", "安全性"]
 JUDGE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"

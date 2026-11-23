@@ -25,10 +25,15 @@ sys.path.insert(0, str(BASE.parent / "evals"))
 PROMPT_DIR = BASE.parent / "prompts"
 
 # ---- .env ----
-for line in open(BASE.parent / ".env", encoding="utf-8"):
-    if "=" in line and not line.startswith("#"):
-        k, v = line.strip().split("=", 1)
-        os.environ.setdefault(k, v)
+_env = BASE.parent / ".env"
+if not _env.exists() and (BASE.parent / ".env.example").exists():
+    import shutil
+    shutil.copyfile(BASE.parent / ".env.example", _env)  # 首次运行：占位值示例文件拷成 .env
+if _env.exists():
+    for line in open(_env, encoding="utf-8"):
+        if "=" in line and not line.startswith("#"):
+            k, v = line.strip().split("=", 1)
+            os.environ.setdefault(k, v)
 
 CONFIG = json.load(open(BASE / "retrieval_config.json", encoding="utf-8"))
 

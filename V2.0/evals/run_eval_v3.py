@@ -20,10 +20,15 @@ BASE = Path(__file__).resolve().parent
 PROJ = BASE.parent
 for p in (str(PROJ), str(PROJ / "src"), str(BASE)):
     sys.path.insert(0, p)
-for line in open(PROJ / ".env", encoding="utf-8"):
-    if "=" in line and not line.startswith("#"):
-        k, v = line.strip().split("=", 1)
-        __import__("os").environ.setdefault(k, v)
+_env = PROJ / ".env"
+if not _env.exists() and (PROJ / ".env.example").exists():
+    import shutil
+    shutil.copyfile(PROJ / ".env.example", _env)
+if _env.exists():
+    for line in open(_env, encoding="utf-8"):
+        if "=" in line and not line.startswith("#"):
+            k, v = line.strip().split("=", 1)
+            __import__("os").environ.setdefault(k, v)
 
 OUT = BASE / "results" / "v3_batch"
 OUT.mkdir(parents=True, exist_ok=True)

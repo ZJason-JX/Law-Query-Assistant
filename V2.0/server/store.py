@@ -14,6 +14,9 @@ sys.path.insert(0, str(BASE / "src"))
 sys.path.insert(0, str(BASE / "evals"))
 
 _env_fp = BASE / ".env"
+if not _env_fp.exists() and (BASE / ".env.example").exists():
+    import shutil
+    shutil.copyfile(BASE / ".env.example", _env_fp)  # 首次运行：占位值示例文件拷成 .env
 if _env_fp.exists():
     for line in open(_env_fp, encoding="utf-8"):
         if "=" in line and not line.startswith("#"):
@@ -111,8 +114,12 @@ ENV_KEYS = ("TYPESAFE_API_KEY", "DEEPSEEK_API_KEY", "DOUBAO_API_KEY", "QWEN_API_
 
 
 def get_keys() -> dict:
-    return {k: {"set": bool(os.environ.get(k)), "tail": (os.environ.get(k) or "")[-4:]}
-            for k in ENV_KEYS}
+    out = {}
+    for k in ENV_KEYS:
+        v = os.environ.get(k, "")
+        real = bool(v) and v != "apikey_123123"   # 示例占位值不算已设置
+        out[k] = {"set": real, "tail": v[-4:] if real else ""}
+    return out
 
 
 def save_keys(patch: dict) -> dict:

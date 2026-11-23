@@ -19,11 +19,16 @@ RES = EVAL / "results"
 sys.path.insert(0, str(BASE / "src"))
 sys.path.insert(0, str(EVAL))
 
-for line in open(BASE / ".env", encoding="utf-8"):
-    if "=" in line and not line.startswith("#"):
-        k, v = line.strip().split("=", 1)
-        import os
-        os.environ.setdefault(k, v)
+_env = BASE / ".env"
+if not _env.exists() and (BASE / ".env.example").exists():
+    import shutil
+    shutil.copyfile(BASE / ".env.example", _env)
+if _env.exists():
+    for line in open(_env, encoding="utf-8"):
+        if "=" in line and not line.startswith("#"):
+            k, v = line.strip().split("=", 1)
+            import os
+            os.environ.setdefault(k, v)
 
 st.set_page_config(page_title="法律问答助手2.0 观测面板", layout="wide")
 
